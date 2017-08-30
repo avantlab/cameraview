@@ -236,10 +236,12 @@ class Camera2 extends CameraViewImpl {
 
     @Override
     void startPreview() {
+        start();
     }
 
     @Override
     void stopPreview() {
+        stop();
     }
 
     @Override
