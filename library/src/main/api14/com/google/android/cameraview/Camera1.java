@@ -105,6 +105,22 @@ class Camera1 extends CameraViewImpl {
         releaseCamera();
     }
 
+    @Override
+    void startPreview() {
+        if (mCamera != null) {
+            mCamera.startPreview();
+        }
+        mShowingPreview = true;
+    }
+
+    @Override
+    void stopPreview() {
+        if (mCamera != null) {
+            mCamera.stopPreview();
+        }
+        mShowingPreview = false;
+    }
+
     // Suppresses Camera#setPreviewTexture
     @SuppressLint("NewApi")
     void setUpPreview() {
@@ -244,7 +260,6 @@ class Camera1 extends CameraViewImpl {
                     isPictureCaptureInProgress.set(false);
                     mCallback.onPictureTaken(data);
                     camera.cancelAutoFocus();
-                    camera.startPreview();
                 }
             });
         }

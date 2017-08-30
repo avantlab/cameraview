@@ -261,6 +261,14 @@ public class CameraView extends FrameLayout {
         mImpl.stop();
     }
 
+    public void startPreview() {
+        mImpl.startPreview();
+    }
+
+    public void stopPreview() {
+        mImpl.stopPreview();
+    }
+
     /**
      * @return {@code true} if the camera is opened.
      */

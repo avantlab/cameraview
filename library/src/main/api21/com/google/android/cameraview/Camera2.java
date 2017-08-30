@@ -235,6 +235,14 @@ class Camera2 extends CameraViewImpl {
     }
 
     @Override
+    void startPreview() {
+    }
+
+    @Override
+    void stopPreview() {
+    }
+
+    @Override
     boolean isCameraOpened() {
         return mCamera != null;
     }
